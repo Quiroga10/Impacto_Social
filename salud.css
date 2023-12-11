@@ -1,0 +1,134 @@
+body{
+    background-color: #fff7e9;
+}
+
+main{
+    width: 50rem;
+    margin: 0 auto;
+}
+
+h1{
+    text-align: center;
+}
+
+p{
+    text-align: justify;
+}
+
+.seccion-navegacion {
+    position: relative;
+    width: 42vw;
+    height: 5rem;
+    margin: 0 auto;
+    top: 5rem;
+}
+
+.opcion {
+    display: block;
+    position: relative;
+    height: 76px;
+    width: 120px;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Bordes superiores */
+
+.opcion.home {
+    border-top: #ffc000 0.3em solid;
+}
+
+.opcion.economia {
+    border-top: #b81800 0.3em solid;
+}
+
+.opcion.mapa {
+    border-top: #00a53c 0.3em solid;
+}
+
+.opcion.educacion {
+    border-top: #9600b4 0.3em solid;
+}
+
+.opcion.salud {
+    border-top: #2cbdd6 0.3em solid;
+}
+
+/* Atributos y transición */
+
+.opcion>span {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0%;
+    transition: 0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+}
+
+.opcion:after,
+.opcion>span>span {
+    display: block;
+    text-align: center;
+    border-radius: 0em;
+    padding: 2em 0 1.5em;
+}
+
+.opcion:after {
+    content: attr(data-title);
+    width: 100%;
+    background: #000;
+    color: #fff;
+}
+
+.opcion>span>span {
+    width: 120px;
+    color: #fff;
+}
+
+.opcion.home>span>span {
+    background: #ffc000;
+}
+
+.opcion.mapa>span>span {
+    background: #00a53c;
+}
+
+.opcion.economia>span>span {
+    background: #b81800;
+}
+
+.opcion.educacion>span>span {
+    background: #9600b4;
+}
+
+.opcion.salud>span>span {
+    background: #2cbdd6;
+}
+
+.opcion.anexos>span>span {
+    background: #df1167;
+}
+/* Lo que pasa con hover */
+
+.opcion:hover>span {
+    height: 100%;
+}
+
+/* Dando formato a lista */
+
+.navegacion {
+    list-style-type: none;
+    margin-left: 5rem;
+    padding: 0;
+}
+
+.navegacion li a {
+    display: inline;
+    float: left;
+    text-decoration: none;
+    font-family: sans;
+}
+

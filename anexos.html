@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anexos</title>
+    <style>
+        body {
+            background-color: #fff7e9;
+        }
+
+        .container-img {
+            width: 100rem;
+            display: grid;
+            grid-template-columns: repeat(3, 2fr);
+            justify-items: center;
+            gap: 7rem;
+            margin: 0 auto;
+            margin-top: 6rem;
+        }
+
+        img {
+            width: 25rem;
+        }
+
+        .seccion-navegacion {
+            position: relative;
+            width: 42vw;
+            height: 5rem;
+            margin: 0 auto;
+            top: 2rem;
+            font-size: 1rem;
+        }
+
+        .opcion {
+            display: block;
+            position: relative;
+            height: 76px;
+            width: 120px;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        /* Bordes superiores */
+
+        .opcion.home {
+            border-top: #ffc000 0.3em solid;
+        }
+
+        .opcion.economia {
+            border-top: #b81800 0.3em solid;
+        }
+
+        .opcion.mapa {
+            border-top: #00a53c 0.3em solid;
+        }
+
+        .opcion.educacion {
+            border-top: #9600b4 0.3em solid;
+        }
+
+        .opcion.salud {
+            border-top: #2cbdd6 0.3em solid;
+        }
+
+        .opcion.anexos {
+            border-top: #df1167 0.3em solid;
+        }
+
+
+        /* Atributos y transición */
+
+        .opcion>span {
+            display: block;
+            position: absolute;
+            overflow: hidden;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 0%;
+            transition: 0.5s ease-in-out;
+            -webkit-transition: 0.5s ease-in-out;
+        }
+
+        .opcion:after,
+        .opcion>span>span {
+            display: block;
+            text-align: center;
+            border-radius: 0em;
+            padding: 2em 0 1.5em;
+        }
+
+        .opcion:after {
+            content: attr(data-title);
+            width: 100%;
+            background: #000;
+            color: #fff;
+        }
+
+        .opcion>span>span {
+            width: 120px;
+            color: #fff;
+        }
+
+        .opcion.home>span>span {
+            background: #ffc000;
+        }
+
+        .opcion.mapa>span>span {
+            background: #00a53c;
+        }
+
+        .opcion.economia>span>span {
+            background: #b81800;
+        }
+
+        .opcion.educacion>span>span {
+            background: #9600b4;
+        }
+
+        .opcion.salud>span>span {
+            background: #2cbdd6;
+        }
+
+        .opcion.anexos>span>span {
+            background: #df1167;
+        }
+
+        /* Lo que pasa con hover */
+
+        .opcion:hover>span {
+            height: 100%;
+        }
+
+        /* Dando formato a lista */
+
+        .navegacion {
+            list-style-type: none;
+            margin-left: 5rem;
+            padding: 0;
+        }
+
+        .navegacion li a {
+            display: inline;
+            float: left;
+            text-decoration: none;
+            font-family: sans;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container-img">
+            <img src="/foto1.jpeg" alt="">
+            <img src="/foto2.jpeg" alt="">
+            <img src="/foto3.jpeg" alt="">
+        </div>
+        <section class="seccion-navegacion">
+            <ul class="navegacion">
+                <li><a class="opcion home" href="./index.html" data-title="1"><span>
+                            <span>1</span>
+                        </span></a></li>
+                <li>
+                    <a class="opcion mapa" href="./mapa_mental.html" data-title="2">
+                        <span>
+                            <span>2</span>
+                        </span>
+                    </a>
+                </li>
+                <li><a class="opcion economia" href="./economia.html" data-title="3">
+                        <span>
+                            <span>3</span>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="opcion educacion" href="./educacion.html" data-title="4">
+                        <span>
+                            <span>4</span>
+                        </span>
+                    </a>
+                </li>
+                <li><a class="opcion salud" href="./salud.html" data-title="5">
+                        <span>
+                            <span>5</span>
+                        </span>
+                    </a></li>
+                <li><a class="opcion anexos" href="./anexos.html" data-title="6">
+                        <span>
+                            <span>6</span>
+                        </span>
+                    </a></li>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>
